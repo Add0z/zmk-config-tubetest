@@ -17,8 +17,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-    
-
         bluetooth_layer {
             bindings = <&to 3>;
             key-positions = <48 49>;
