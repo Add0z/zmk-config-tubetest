@@ -17,9 +17,38 @@
 / {
     combos {
         compatible = "zmk,combos";
+    
+
+        bluetooth_layer {
+            bindings = <&to 3>;
+            key-positions = <48 49>;
+            layers = <0 3 1 2>;
+        };
+
+        next_song {
+            bindings = <&kp C_NEXT>;
+            key-positions = <0 1>;
+            layers = <1 0 2 3>;
+        };
     };
 
     macros {
+        mute: mute {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp K_MUTE &kp C_PP>;
+        };
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LEFT_SHIFT>;
+        };
     };
 
     keymap {
