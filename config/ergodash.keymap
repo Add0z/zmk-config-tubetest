@@ -17,6 +17,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+
         bluetooth_layer {
             bindings = <&to 3>;
             key-positions = <48 49>;
@@ -38,14 +39,6 @@
             bindings =
                 <&macro_tap>,
                 <&kp K_MUTE &kp C_PP>;
-        };
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            label = "new_macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI &kp LEFT_SHIFT>;
         };
     };
 
